@@ -1,0 +1,12 @@
+<p>
+  user works!
+</p>
+
+
+<h3>Get Squad Members!</h3>
+<button (click)="getSquadMembers()">Get Squad</button>
+<ul>
+    <li *ngFor="let member of squadMembers; let i = index">
+        {{i+1}}.{{member.name}}
+    </li>
+</ul>
