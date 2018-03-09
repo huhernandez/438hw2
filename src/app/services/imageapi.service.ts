@@ -14,7 +14,7 @@ export class ImageapiService {
               'Api-Key': environment.gettyKey
           })
       };
-      const gettyUrl = 'https://api.gettyimages.com/v3/search/images?phrase=kitten';
+      const gettyUrl = 'https://api.gettyimages.com/v3/search/images?phrase=funky';
       return this.httpClient.get(gettyUrl, httpOptions);
   }
   
