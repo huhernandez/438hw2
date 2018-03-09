@@ -6,12 +6,14 @@ import {AboutComponent} from './components/about/about.component';
 
 import { AppComponent } from './app.component';
 import { UserComponent } from './components/user/user.component';
+import { ImageapiService} from './services/imageapi.service';
 import {SquaddataService} from './services/squaddata.service';
 import {RouterModule, Routes} from '@angular/router';
 
 
 const appRoutes: Routes = [
-  {path: ' ', component: UserComponent}
+  {path: ' ', component: UserComponent},
+  {path: 'about', component: AboutComponent}
   ]
 
 @NgModule({
@@ -26,7 +28,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [SquaddataService],
+  providers: [SquaddataService, ImageapiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
